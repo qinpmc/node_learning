@@ -66,12 +66,14 @@ npm install package
 ### 网站访问流程
 
 ![](./process1.png)
-
+![](./process2.png)
 
 ### URL组成
 ![](./url组成.png)
 
 
+常用对照表：
+tool.oschina.net/commons
 
 
 ### fs文件模块
