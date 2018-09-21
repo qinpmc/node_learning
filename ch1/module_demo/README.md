@@ -10,6 +10,12 @@
    3. 如果只写模块名：
       var greet = require('hello');
       则Node会依次在 __内置模块__、 __全局模块__ 和 __当前模块__ 下查找hello.js
+	  
+	     linux下：
+		/home/user/node_modules/foo/bar   // 内置模块--windows下取决于安装目录（环境变量path）
+		/home/node_modules/foo/bar        // 全局模块 --windows下如C:\Users\user\node_modules
+		/node_modules/foo/bar             // 当前模块
+	  
 
    4. exports.foo = function () { return 'foo'; };
       exports.bar = function () { return 'bar'; };
@@ -77,4 +83,8 @@ console.log(typeof data2);
 console.log(data2);
 ```
 
+
+### 可以使用以下方式加载和使用一个JSON文件
+
+var data = require('./data.json');
 
