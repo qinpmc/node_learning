@@ -88,3 +88,12 @@ fs.readFil(fileName,"utf-8"，function(err,text){});
 ### global
 nodejs中 global 类似于浏览器中的 window；
 nodejs中this 一般指向模块的exports ，并非像浏览器中默认指向window
+
+global属性
+
+clearImmediate
+setImmediate
+pid
+process 当前进程对象
+
+
