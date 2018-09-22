@@ -22,7 +22,7 @@ exports.greet = greet;
 
 
 
-//错误的写法，为导出任何变量
+//错误的写法，未导出任何变量
 /*
 exports = {
 	hello:hello,

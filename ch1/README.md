@@ -24,30 +24,6 @@ Read -eval -print-loop 读取-求值-输出 循环
 
 
 
-## 模块
-
-1.核心模块，如http、fs、path等
-2.文件模块， 如 var math = require("./math");
-
-```
-math.js  --- math 模块
----------
-var add = function (a,b){
-    return a+b ;
-};
-var name = "qq";
-exports.add = add;
-exports.name = name;
-
-test1.js
----------
-var math = require("./math"); // 引入模块
-
-console.log(math.add(100,200)); //300
-console.log(math.name); //qq
-```
-
-3.第三方模块，如 var async = require("async");
 
 
 
@@ -126,4 +102,4 @@ nextTick > setTimeout > setImmediate > 异步IO操作
 - util.inspect(obj1)
 - util.isArray
 - util.isDate
-- util.isRegExp 
+- util.isRegExp
