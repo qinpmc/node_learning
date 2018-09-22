@@ -169,3 +169,26 @@ var home3 = require("home3");  // 创建包，进行测试
 console.log(home3.home3); //china33
 ```
 
+### module的属性和方法
+- module.id  模块的id，模块的绝对路径（当前模块中输出自己的id 为 .)
+- module.filename ,模块的绝对路径
+- module.loaded ，是否完成加载
+- module.parent ,父模块 ，即调用当前模块的模块对象
+- module.children ，子模块，当前模块require的模块
+- module.exports，导出对象
+- module.paths 模块的查找路径
+
+### require的属性和方法
+- main 主模块
+- resolve 得到实际查找结果路径
+- cache 模块缓存
+- delete cache 删除缓存
+
+
+
+
+
+
+
+
+
