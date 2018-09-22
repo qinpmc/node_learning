@@ -120,5 +120,10 @@ process 当前进程对象
 优先级
 nextTick > setTimeout > setImmediate > 异步IO操作
 
+### util模块
 
-
+- util.inherits(Child,Parent)
+- util.inspect(obj1)
+- util.isArray
+- util.isDate
+- util.isRegExp 
