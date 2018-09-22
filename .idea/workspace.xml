@@ -2,27 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f2edb9a-6226-42a6-97a2-e87b0aa3076f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ch1/4global/global-process.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ch1/4global/global1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ch1/4global/process2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ch1/4global/process3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ch1/4global/1.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ch1/4global/process4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ch1/4global/setImmediate5.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ch1/README.md" afterPath="$PROJECT_DIR$/ch1/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ch1/http/httpserver1.js" afterPath="$PROJECT_DIR$/ch1/1http/httpserver1.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ch1/http/httpserver2.js" afterPath="$PROJECT_DIR$/ch1/1http/httpserver2.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ch1/http/querystring.js" afterPath="$PROJECT_DIR$/ch1/1http/querystring.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ch1/http/response1.html" afterPath="$PROJECT_DIR$/ch1/1http/response1.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ch1/http/url.js" afterPath="$PROJECT_DIR$/ch1/1http/url.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ch1/http/url2.js" afterPath="$PROJECT_DIR$/ch1/1http/url2.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ch1/http2/bg.css" afterPath="$PROJECT_DIR$/ch1/2http2/bg.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ch1/http2/httpserver-mime.js" afterPath="$PROJECT_DIR$/ch1/2http2/httpserver-mime.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ch1/http2/index.html" afterPath="$PROJECT_DIR$/ch1/2http2/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ch1/module_demo/README.md" afterPath="$PROJECT_DIR$/ch1/3module_demo/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ch1/module_demo/demo1/math.js" afterPath="$PROJECT_DIR$/ch1/3module_demo/demo1/math.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ch1/module_demo/demo1/test1.js" afterPath="$PROJECT_DIR$/ch1/3module_demo/demo1/test1.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ch1/module_demo/demo2/data.json" afterPath="$PROJECT_DIR$/ch1/3module_demo/demo2/data.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ch1/module_demo/demo2/hello2.js" afterPath="$PROJECT_DIR$/ch1/3module_demo/demo2/hello2.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ch1/module_demo/demo2/main2.js" afterPath="$PROJECT_DIR$/ch1/3module_demo/demo2/main2.js" />
     </list>
     <ignored path="node_learning1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,24 +27,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="process3.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ch1/4global/process3.js">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ch1/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor vertical-scroll-proportion="0.45904174">
+                <caret line="116" column="23" selection-start-line="116" selection-start-column="23" selection-end-line="116" selection-end-column="23" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setImmediate5.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ch1/4global/setImmediate5.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3752345">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="global1.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ch1/4global/global1.js">
+      <file leaf-file-name="1.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ch1/4global/1.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="78" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+              <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -91,13 +86,16 @@
         <option value="$PROJECT_DIR$/ch1/http2/index.html" />
         <option value="$PROJECT_DIR$/ch1/http2/httpserver.js" />
         <option value="$PROJECT_DIR$/ch1/module_demo/math.js" />
-        <option value="$PROJECT_DIR$/ch1/README.md" />
         <option value="$PROJECT_DIR$/ch1/4global/g.html" />
         <option value="$PROJECT_DIR$/ch1/4global/1global-process.js" />
         <option value="$PROJECT_DIR$/ch1/4global/global-process.js" />
         <option value="$PROJECT_DIR$/ch1/4global/process2.js" />
         <option value="$PROJECT_DIR$/ch1/4global/global1.js" />
         <option value="$PROJECT_DIR$/ch1/4global/process3.js" />
+        <option value="$PROJECT_DIR$/ch1/4global/process4.js" />
+        <option value="$PROJECT_DIR$/ch1/4global/1.txt" />
+        <option value="$PROJECT_DIR$/ch1/4global/setImmediate5.js" />
+        <option value="$PROJECT_DIR$/ch1/README.md" />
       </list>
     </option>
   </component>
@@ -107,10 +105,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="648" />
-    <option name="y" value="194" />
-    <option name="width" value="1272" />
-    <option name="height" value="698" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -183,24 +181,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_learning1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_learning1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ch1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="4global" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -227,13 +207,7 @@
       <recent name="F:\notes\node\node_learning1\ch1\http" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.process3.js">
-    <configuration default="false" name="httpserver.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="D:/Program Files/nodejs/node" path-to-js-file="httpserver.js" working-dir="$PROJECT_DIR$/ch1/2http2">
-      <method />
-    </configuration>
-    <configuration default="false" name="1global-process.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="D:/Program Files/nodejs/node" path-to-js-file="$PROJECT_DIR$/ch1/4global/global-process.js" working-dir="$PROJECT_DIR$/ch1/4global">
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Node.js.setImmediate5.js">
     <configuration default="false" name="process2.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="D:/Program Files/nodejs/node" path-to-js-file="process2.js" working-dir="$PROJECT_DIR$/ch1/4global">
       <method />
     </configuration>
@@ -241,6 +215,12 @@
       <method />
     </configuration>
     <configuration default="false" name="process3.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="D:/Program Files/nodejs/node" path-to-js-file="process3.js" working-dir="$PROJECT_DIR$/ch1/4global">
+      <method />
+    </configuration>
+    <configuration default="false" name="process4.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="D:/Program Files/nodejs/node" path-to-js-file="process4.js" working-dir="$PROJECT_DIR$/ch1/4global">
+      <method />
+    </configuration>
+    <configuration default="false" name="setImmediate5.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="D:/Program Files/nodejs/node" path-to-js-file="setImmediate5.js" working-dir="$PROJECT_DIR$/ch1/4global">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -292,19 +272,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Node.js.httpserver.js" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.1global-process.js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.process2.js" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.global1.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.process3.js" />
+      <item index="0" class="java.lang.String" itemvalue="Node.js.process2.js" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.global1.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.process3.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.process4.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.setImmediate5.js" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.process3.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.global1.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.process2.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.1global-process.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.httpserver.js" />
+        <item index="0" class="java.lang.String" itemvalue="Node.js.setImmediate5.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.process4.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.process3.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.global1.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.process2.js" />
       </list>
     </recent_temporary>
   </component>
@@ -319,15 +299,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="648" y="194" width="1272" height="698" extended-state="1" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20893142" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13645834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32235703" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47256637" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22295082" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7883721" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -466,17 +446,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ch1/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.55934197">
-            <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ch1/1http/httpserver2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -493,37 +462,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ch1/4global/process2.js">
+    <entry file="file://$PROJECT_DIR$/ch1/4global/global1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65666044">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="78" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch1/4global/1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ch1/4global/global-process.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37593985">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="6" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ch1/4global/global1.js">
+    <entry file="file://$PROJECT_DIR$/ch1/4global/process2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="78" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ch1/4global/process3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3752345">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch1/4global/process4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch1/4global/setImmediate5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch1/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor vertical-scroll-proportion="0.45904174">
+            <caret line="116" column="23" selection-start-line="116" selection-start-column="23" selection-end-line="116" selection-end-column="23" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

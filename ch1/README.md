@@ -89,11 +89,36 @@ fs.readFil(fileName,"utf-8"，function(err,text){});
 nodejs中 global 类似于浏览器中的 window；
 nodejs中this 一般指向模块的exports ，并非像浏览器中默认指向window
 
-global属性
+####  1 global属性
 
 clearImmediate
 setImmediate
 pid
 process 当前进程对象
+
+
+#### 2 process对象
+
+- process.stdout.write
+- process.stdin.on
+- process.argv.forEach
+示例(global-process.js)
+
+- process.on
+示例(process2.js)
+
+- process.cwd
+- process.chdir
+示例(process3.js)
+
+- process.nextTick
+示例(process4.js)
+
+- process.nextTick  优先级
+示例(setImmediate5.js)
+
+优先级
+nextTick > setTimeout > setImmediate > 异步IO操作
+
 
 
