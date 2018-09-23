@@ -12,4 +12,17 @@
 - npm uninstall [-g] gulp 卸载[全局]下的gulp包
 - npm update  [-g] gulp 更新[全局]gulp包
 - npm update 更新当前项目下所有的包
+- npm init 初始化项目
+- npm install mime --save package.json中没有记录
+
+- npm shrinkwrap  生成npm-shrinkwrap.json,记录当前准确的版本（即当前正在使用的版本），
+  下一次 npm install 时，会安装所有版本完全相同的模块；
+  加上参数 --dev ，还可以记录devDependencies字段中模块的准确版本
+
+- npm prune 修剪模块
+  使用 npm shrinkwrap时，可能存在某个已经安装的模块不在dependencies字段内，使用 npm shrinkwrap会报错。
+  使用npm prune 移除所有不在dependencies字段内模块，可以使用 npm prune [pakageName] 移除全部或某个模块
+
+- npm adduser
+- npm publish
 
