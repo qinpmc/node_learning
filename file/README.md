@@ -1,8 +1,13 @@
 ## file
 
 ### 方法
-- readFile
-- readFileSync ,同步读取
+
+- readFile / readFileSync    将文件整体读入缓存区
+- writeFile / writeFileSync  将数据完整写入文件
+- read / readSync            将文件部分读入缓存区
+- write  / writeSync         将缓存区部分数据写入文件
+- fs.stat 获取文件信息
+
 
   源码中flag选项：
   O_READONLY : 只读
@@ -30,6 +35,19 @@ var fd = fs.openSync("sample1.txt","r");
  */
 fs.readSync(fd,buffer,0,10,5);
 console.log(buffer.toString()); //is sample1 ;原文为： This is sample1 txt ..
+
+
+var buffer = new Buffer(20);
+fs.open("sample1.txt","r",function(err,fd){
+    fs.read(fd,buffer,0,10,0,function(err,bytesRead){
+        console.log("bytesRead",bytesRead); //bytesRead 10
+        fs.read(fd,buffer,10,5,10,function(err,bytesRead){
+            console.log("bytesRead",bytesRead); //bytesRead 5
+            console.log(buffer.toString()); //This is sample1
+        })
+    })
+});
+
 ```
 
 
@@ -57,3 +75,4 @@ fs.open("out2.txt","w", function (err,fd) {
   callback ：回调函数
  */
 ```
+
