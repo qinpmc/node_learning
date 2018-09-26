@@ -37,6 +37,9 @@ console.log(buf1.toString()); //中国
 ```
 
 - slice() ;两个参数，第一个起始位置，第二个参数（可选) 结束位置，没有取末尾
+           .slice方法也不是返回一个新的Buffer，而更像是返回了指向原Buffer中间的某个位置的指针，
+		   对.slice方法返回的Buffer的修改会作用于原Buffer
+		   
 
 
 - copy() 第一个参数：目标buffer；第二个参数：目标buffer的起始位置；
@@ -97,7 +100,7 @@ console.log(newBuffer1);
 
 newBuffer1[0] =5;
 console.log("修改newBuffer1")
-console.log(buffer1);         //  buffer1 也改变了！！
+console.log(buffer1);         //  buffer1 也改变了！！ 对.slice方法返回的Buffer的修改会作用于原Buffer，
 console.log(newBuffer1);      //newBuffer1改变了
 console.log(buffer1.toString());
 
