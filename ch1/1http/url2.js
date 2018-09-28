@@ -1,5 +1,5 @@
 const url = require("url");
-const http = require("1http");
+const http = require("http");
 
 http.createServer(function(req,res){
 	//访问地址：http://localhost:8888/1.html?name=qq&age=22#middle

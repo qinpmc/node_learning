@@ -1,4 +1,4 @@
-const http = require("1http");
+const http = require("http");
 const querystring = require("querystring");
 http.createServer(function(req,res){
 	console.log(querystring.parse(req.url));
