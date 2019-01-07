@@ -50,7 +50,7 @@ exports.greet = greet;
 
 
 
-//错误的写法，为导出任何变量
+//错误的写法，未导出任何变量
 /*
 exports = {
 	hello:hello,
@@ -68,8 +68,8 @@ var hello2 = require("./hello2");
 hello2.hello();
 hello2.greet("test22222");
 
-var data2 = require("./data.json");
-console.log(typeof data2);
+var data2 = require("./data.json");  //可以直接引入json
+console.log(typeof data2);  // object
 console.log(data2);
 ```
 
@@ -120,6 +120,7 @@ console.log(math.name); //qq
 ![文件模块加载](./文件模块加载.png)
 
 文件加载路径如下例：
+
 ```
 /*var home_1 = require("./home_1");
 console.log(home_1.home); //china
@@ -145,6 +146,7 @@ console.log(module.paths); */
             |--- package.json
 
 package.json       ---main 属性默认为 index.js
+
 ```
 {
   "name": "init_test",
