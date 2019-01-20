@@ -299,25 +299,91 @@ bar/index.node
 文件模块加载过程如下图：
 ![文件模块加载](./文件模块加载.png)
 
-
+示例见 demo3-load-json 、demo3_1-loadpath、demo3_2-loadpath、demo3_3-loadpath
 
 
 
 ### 3.2 require的属性和方法
-- main 主模块
-- resolve 得到实际查找结果路径
-- cache 模块缓存
+
+属性：
+- main 属性：是否是主模块
+require的main属性，可以用来判断模块是直接执行，还是被调用执行。直接执行的时候（node module.js），require.main属性指向模块本身。
+
+```
+require.main === module
+// true
+```
+- cache属性：模块缓存
+
+方法：
+- resolve方法： 得到实际查找结果路径
 - delete cache 删除缓存
 
+```
+delete require.cache[require.resolve("home_2.js")];
+```
 
 
 
 
 
+## 4 模块的缓存
+第一次加载某个模块时，Node会缓存该模块。以后再加载该模块，就直接从缓存取出该模块的module.exports属性。
+
+```
+require('./example.js');
+require('./example.js').message = "hello";
+require('./example.js').message
+// "hello"
+```
+上面代码中，连续三次使用require命令，加载同一个模块。第二次加载的时候，为输出的对象添加了一个message属性。
+但是第三次加载的时候，这个message属性依然存在，这就证明require命令并没有重新加载模块文件，而是输出了缓存。
+如果想要多次执行某个模块，可以让该模块输出一个函数，然后每次require这个模块的时候，重新执行一下输出的函数。
 
 
+所有缓存的模块保存在require.cache之中，如果想删除模块的缓存，可以像下面这样写。
 
+```
+// 删除指定模块的缓存
+delete require.cache[moduleName];
 
+// 删除所有模块的缓存
+Object.keys(require.cache).forEach(function(key) {
+  delete require.cache[key];
+})
+```
+
+## 5 模块的加载机制
+CommonJS模块的加载机制是，**输入的是被输出的值的拷贝。也就是说，一旦输出一个值，模块内部的变化就影响不到这个值**
+
+```
+// lib.js
+var counter = 3;
+function incCounter() {
+  counter++;
+}
+module.exports = {
+  counter: counter,
+  incCounter: incCounter,
+};
+
+// main.js 加载上面的模块。
+var counter = require('./lib').counter;
+var incCounter = require('./lib').incCounter;
+
+console.log(counter);  // 3
+incCounter();
+console.log(counter); // 3  counter输出以后，lib.js模块内部的变化就影响不到counter
+```
+
+一旦require函数准备完毕，整个所要加载的脚本内容，就被放到一个新的函数之中，这样可以避免污染全局环境。该函数的参数包括require、module、exports，以及其他一些参数。
+
+(function (exports, require, module, __filename, __dirname) {
+  // YOUR CODE INJECTED HERE!
+});
+
+- __filename：指向当前运行的脚本文件名。
+- __dirname：指向当前运行的脚本所在的目录。
 
 
 

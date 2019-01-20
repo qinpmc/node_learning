@@ -1,10 +1,10 @@
 // 演示 相对路径   核心模块 加载
-/*
-var home_1 = require("./home_1");  //相对路径
+
+/*var home_1 = require("./home_1");  //相对路径
 console.log(home_1.home); //china
 console.log(require.resolve("./home_1"));  //F:\notes\node\node_learning\ch2模块-module\demo3_1-loadpath\home_1.js
-console.log(module.paths);
-*/
+console.log(module.paths);*/
+
 
 
 /*
