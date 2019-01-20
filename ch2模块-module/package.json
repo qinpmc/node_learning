@@ -1,0 +1,11 @@
+{
+  "name": "ch2",
+  "version": "1.0.0",
+  "description": "Node 应用由模块组成，采用 CommonJS 模块规范。\r **每个文件就是一个模块，有自己的作用域。在一个文件里面定义的变量、函数、类，都是私有的**，对其他文件不可见。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
