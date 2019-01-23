@@ -107,8 +107,8 @@ $ npm run test -- anothertest.js
 $ mocha test/ anothertest.js
 ```
 
-
-
-
+## 3 使用淘宝 NPM 镜像
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+cnpm install [name]
 
 
