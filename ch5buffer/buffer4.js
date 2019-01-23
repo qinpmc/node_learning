@@ -17,7 +17,7 @@ const buf3 = buf2.slice(0, 3)
 console.log(buf3.toString('ascii', 0, buf3.length));// 输出: abc
 
 buf2[0] = 33;
-console.log(buf3.toString('ascii', 0, buf3.length));// 输出: !bc
+console.log(buf3.toString('ascii', 0, buf3.length));// 输出: !bc 修改buf2,造成buf3也发生变化
 
 
 

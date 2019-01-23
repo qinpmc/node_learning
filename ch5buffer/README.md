@@ -101,6 +101,7 @@ new Buffer() 构造函数已被废弃，建议使用 Buffer.from()、Buffer.allo
 
 注意： 创建一个指向与原始 Buffer 同一内存的新 Buffer，但使用 start 和 end 进行了裁剪。
 **修改新建的 Buffer 切片，也会同时修改原始的 Buffer，因为两个对象所分配的内存是重叠的。**
+详见buffer4.js 示例
 
 ### 2.4.3 buf.toString()
 
@@ -108,14 +109,7 @@ buf.toString([encoding[, start[, end]]])
 
 ### 2.4.4 buf.values()/buf.keys()/buf.entries()
 
-
-
-
-
-
-
-
-
+### 2.4.5 buf.copy(target[, targetStart[, sourceStart[, sourceEnd]]]
 
 
 ## 3 Buffer 与字符编码
@@ -132,8 +126,31 @@ Node.js 支持的字符编码有：
 - 'hex' - 将每个字节编码成两个十六进制字符。
 
 
+## 4 string_decoder
 
+string_decoder 模块提供了一个 API，用于以保留编码的多字节 UTF-8 和 UTF-16 字符的方式将 Buffer 对象解码为字符串.
+buffer slice后，汉字从中间被截断，造成乱码，可用StringDecoder  处理.
+### 4.1 StringDecoder 类
 
+1. 构造函数： new StringDecoder([encoding])
+
+```
+const { StringDecoder } = require('string_decoder');
+const decoder = new StringDecoder('utf8');
+```
+
+2. stringDecoder.end([buffer])
+> buffer <Buffer> | <TypedArray> | <DataView> 包含要解码的字节的 Buffer、TypedArray 或 DataView。
+> 返回: <string>
+
+以字符串形式返回存储在内部缓冲区中的任何剩余输入。 表示不完整的 UTF-8 和 UTF-16 字符的字节将替换为适合字符编码的替换字符。
+
+3. stringDecoder.write(buffer)
+> buffer <Buffer> | <TypedArray> | <DataView> 包含要解码的字节的 Buffer、TypedArray 或 DataView。
+> 返回: <string>
+
+返回一个已解码的字符串，确保在返回的字符串不包含 Buffer、TypedArray 或 DataView 末尾的任何不完整的多字节字符，
+并将其存储在内部缓冲区中，以便下次调用 stringDecoder.write() 或 stringDecoder.end()。
 
 
 
