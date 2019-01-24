@@ -27,7 +27,7 @@ Node.js 创建的流都是运作在字符串和 Buffer（或 Uint8Array）上。
 一旦内部缓冲的大小达到或超过 highWaterMark 时，则会返回 false。
 stream API 的主要目标，特别是 stream.pipe()，是为了限制数据的缓冲到可接受的程度，也就是读写速度不一致的源头与目的地不会压垮内存。
 
-## 1 可读流
+## 2 可读流
 可读流是对提供数据的来源的一种抽象。
 可读流的例子包括：
 - 客户端的 HTTP 响应
@@ -40,7 +40,7 @@ stream API 的主要目标，特别是 stream.pipe()，是为了限制数据的�
 - process.stdin
 所有可读流都实现了 stream.Readable 类定义的接口。
 
-### 1.1 可读流模式
+### 2.1 可读流模式
 
 可读流运作于两种模式之一：**流动模式（flowing）或暂停模式（paused）**。
 - 在流动模式中，数据**自动从底层系统读取**，并通过 EventEmitter 接口的事件尽可能快地被提供给应用程序。
@@ -89,9 +89,9 @@ pass.resume(); // 必须调用它才会触发 'data' 事件。
 ```
 详见 readable1.js
 
-### 1.3 stream.Readable
+### 2.3 stream.Readable
 
-#### 1.3.1 事件
+#### 2.3.1 事件
 
 1. 'close' 事件
 2. 'data' 事件
@@ -140,7 +140,7 @@ rs.on("readable", function(){
 ```
 详见readable3-区别.js
 
-#### 1.3.2 方法
+#### 2.3.2 方法
 
 1. readable.setEncoding(encoding)
  > encoding <string> 字符编码。
@@ -182,7 +182,7 @@ rs.on("readable", function(){
 
 
 
-## 2 Writable
+## 3 Writable
 可写流是对数据要被写入的目的地的一种抽象。
 可写流的例子包括：
 - 客户端的 HTTP 请求
@@ -195,22 +195,74 @@ rs.on("readable", function(){
 - process.stdout、process.stderr
 
 
+### 3.1 事件
+
+1. 'close' 事件
+当流或其底层资源（比如文件描述符）被关闭时触发。表明不会再触发其他事件，也不会再发生操作。
+
+2. 'drain' 事件
+如果调用 stream.write(chunk) 返回 false，则当可以继续写入数据到流时会触发 'drain' 事件。
+详见 writable5-drain.js
+
+3. 'error' 事件
+> <Error>
+
+当写入数据发生错误时触发。当触发 'error' 事件时，流还未被关闭。
+
+4. 'finish' 事件
+调用 stream.end() 且缓冲数据都已传给底层系统之后触发。
+
+5. 'pipe' 事件
+> src <stream.Readable> 通过管道流入到可写流的来源流。
+
+当在可读流上调用 stream.pipe() 时触发.
+
+6. 'unpipe' 事件
+> src <stream.Readable> 被移除可写流管道的来源流。
+
+当在可读流上调用 stream.unpipe() 时触发.
+详见 writable6.js
+
+
+### 3.2 方法
+
+1. writable.cork()
+
+强制把所有写入的数据都缓冲到内存中。 当调用 stream.uncork() 或 stream.end() 时，缓冲的数据才会被输出。
+当写入大量小块数据到流时，内部缓冲可能失效，从而导致性能下降，writable.cork() 主要用于避免这种情况。
+对于这种情况，实现了 writable._writev() 的流可以用更优的方式对写入的数据进行缓冲。
+
+
+2. writable.destroy([error])
+
+> error <Error>
+
+  返回: <this>。销毁流，并触发 'error' 事件且传入 error 参数。 调用该方法后，可写流就结束了，之后再调用 write() 或 end() 都会导致 ERR_STREAM_DESTROYED 错误。
+
+3. writable.end([chunk][, encoding][, callback])
+
+> chunk <string> | <Buffer> | <Uint8Array> | <any> 要写入的数据。 对于非对象模式的流chunk 必须是字符串、Buffer、或 Uint8Array。 对于对象模式的流， chunk 可以是任何 JavaScript 值，除了 null。
+> encoding <string> 如果 chunk 是字符串，则指定字符编码。
+> callback <Function> 当流结束时的回调函数。
+
+返回: <this>.调用 writable.end() 表明已没有数据要被写入可写流。果传入了 callback 函数，则会做为监听器添加到 'finish' 事件。
+
+
+4. writable.setDefaultEncoding(encoding)
+
+5. writable.uncork()
+将调用 stream.cork() 后缓冲的所有数据输出到目标。
+当使用 writable.cork() 和 writable.uncork() 来管理流的写入缓冲时，建议使用 process.nextTick() 来延迟调用 writable.uncork();
+如果一个流上多次调用 writable.cork()，则必须调用同样次数的 writable.uncork() 才能输出缓冲的数据。
+
+详见 writable7.js
+
+6. writable.write(chunk[, encoding][, callback])
+> chunk <string> | <Buffer> | <Uint8Array> | <any> 要写入的数据。  对于非对象模式的流chunk 必须是字符串、Buffer 或 Uint8Array。 对于对象模式的流，chunk 可以是任何 JavaScript 值，除了 null。
+> encoding <string> 如果 chunk 是字符串，则指定字符编码。
+> callback <Function> 当数据块被输出到目标后的回调函数。
+
+返回: <boolean>。在接收了 chunk 后，如果内部的缓冲小于创建流时配置的 highWaterMark，则返回 true 。 如果返回 false ，则应该停止向流写入数据，直到 'drain' 事件被触发，触发才能继续写入更多数据。
 
 
 
-
-
-
-
-
-
-
-
-
-- 使用实现了stream.Readable 接口的对象，将对象数据读取为流数据，在准备好接收之前，Readable流并不会开始发射数据
-
-fs.ReadStream                读取文件
-http.IncomingMessage         客户端的请求或服务端响应
-net.Socket tcp               连接中的Socket对象
-process.stdin                标准输入流
-Gzip                         压缩流
