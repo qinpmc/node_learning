@@ -182,7 +182,7 @@ rs.on("readable", function(){
 
 
 
-## 3 Writable
+## 3 stream.Writable
 可写流是对数据要被写入的目的地的一种抽象。
 可写流的例子包括：
 - 客户端的 HTTP 请求
@@ -263,6 +263,33 @@ rs.on("readable", function(){
 > callback <Function> 当数据块被输出到目标后的回调函数。
 
 返回: <boolean>。在接收了 chunk 后，如果内部的缓冲小于创建流时配置的 highWaterMark，则返回 true 。 如果返回 false ，则应该停止向流写入数据，直到 'drain' 事件被触发，触发才能继续写入更多数据。
+
+
+## 4 stream.Duplex
+
+双工流（Duplex）是同时实现了 Readable 和 Writable 接口的流。
+Duplex 流的例子包括：
+- TCP socket
+- zlib 流
+- crypto 流
+
+详见 duplex8_1.js/duplex8_2.js
+
+## 5 stream.Transform 类
+
+转换流（Transform）是一种 Duplex 流，但它的输出与输入是相关联的。
+Transform 流的例子包括：
+- zlib 流
+- crypto 流
+
+
+
+
+
+
+
+
+
 
 
 
