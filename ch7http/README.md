@@ -181,8 +181,61 @@ response.writeHead(200, {
 2. response.statusCode
 
 
+## 5 http.IncomingMessage 类
+
+### 5.1 事件
+
+1. 'close' 事件
+
+表明底层连接已关闭。 与 'end' 事件一样，每个响应只触发一次此事件。
+
+### 5.2 方法
+
+1. message.destroy([error])
+
+### 5.3 属性
+
+1. message.complete
+如果已收到并成功解析完整的 HTTP 消息，则 message.complete 属性将为 true。
 
 
+2. message.headers
+请求头或响应头的对象
+
+3. message.method
+仅对从 http.Server 获取的请求有效
+
+4. message.url
+仅对从 http.Server 获取的请求有效。
+
+```
+GET /status?name=ryan HTTP/1.1\r\n
+Accept: text/plain\r\n
+\r\n
+则 request.url 将是：
+
+'/status?name=ryan'
+```
+
+5. message.statusCode
+仅对从 http.ClientRequest 获取的响应有效。
+
+6. message.statusMessage
+仅对从 http.ClientRequest 获取的响应有效。
+
+
+## 6 静态属性方法
+
+### 6.1 http.METHODS
+> <string[]>
+
+解析器支持的 HTTP 方法列表。
+
+### 6.2 http.STATUS_CODES
+
+> <Object>
+
+所有标准 HTTP 响应状态码的集合，以及每个状态码的简短描述。http.STATUS_CODES[404] === 'Not Found'
 
 
 

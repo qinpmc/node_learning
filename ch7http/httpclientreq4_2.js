@@ -4,12 +4,12 @@ const url = require('url');
 
 // 创建 HTTP 隧道代理。
 const proxy = http.createServer((req, res) => {
-        res.writeHead(200, { 'Content-Type': 'text/plain' });
-        res.end('响应内容');
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('响应内容');
 });
 proxy.on('connect', (req, cltSocket, head) => {
     // 连接到原始服务器。
-    const srvUrl = url.parse(`http://${req.url}`);
+    const srvUrl = url.parse(`http://${req.url}`);  // req.url : 'nodejs.cn:80'      srvUrl.hostname : nodejs.cn
     const srvSocket = net.connect(srvUrl.port, srvUrl.hostname, () => {
         cltSocket.write('HTTP/1.1 200 Connection Established\r\n' +
         'Proxy-agent: Node.js-Proxy\r\n' +
@@ -36,17 +36,16 @@ proxy.listen(1337, '127.0.0.1', () => {
 
     req.on('connect', (res, socket, head) => {
         console.log('已连接');
-
-    // 通过 HTTP 隧道发出请求。
-    socket.write('GET / HTTP/1.1\r\n' +
-        'Host: nodejs.cn:80\r\n' +
-        'Connection: close\r\n' +
-        '\r\n');
-    socket.on('data', (chunk) => {
-        console.log(chunk.toString());
+        // 通过 HTTP 隧道发出请求。
+        socket.write('GET / HTTP/1.1\r\n' +
+            'Host: nodejs.cn:80\r\n' +
+            'Connection: close\r\n' +
+            '\r\n');
+        socket.on('data', (chunk) => {
+            console.log(chunk.toString());
+        });
+        socket.on('end', () => {
+            proxy.close();
+        });
     });
-    socket.on('end', () => {
-        proxy.close();
-    });
-});
 });

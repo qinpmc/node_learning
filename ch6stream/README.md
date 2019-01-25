@@ -282,10 +282,7 @@ Transform 流的例子包括：
 - zlib 流
 - crypto 流
 
-
-
-
-
+详见 convert9.js
 
 
 
