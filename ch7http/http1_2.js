@@ -10,7 +10,7 @@ var server = http.createServer(function(req, res){
 
 server.listen(3000);
 
-const keepAliveAgent = new http.Agent({
+const agent = new http.Agent({
     keepAlive: true,
     maxScokets: 10,
     maxFreeSockets: 5
@@ -20,11 +20,11 @@ http.get({
     hostname: 'localhost',
     port: 3000,
     path: '/',
-    agent: keepAliveAgent
+    agent: agent
 }, (res) => {
-    console.log(res instanceof http.IncomingMessage); //true
-    console.log(res instanceof http.ServerResponse); //false
-    console.log(res);
-console.log(res.statusCode);
-console.log(res.headers);
+    console.log(agent.freeSockets); //
+    console.log(agent.maxFreeSocket); //
+    console.log(agent.maxSockets);   //
+    console.log(agent.requests); //
+
 });
