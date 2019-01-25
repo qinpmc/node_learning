@@ -64,20 +64,121 @@ http.request() 使用的默认 http.globalAgent 将所有这些值设置为各�
 
 
 ## 3 http.Server 类
+## 3.1 事件
+
+1. 'close' 事件
+服务器关闭时触发.
+
+2. 'connect' 事件
+每次客户端请求 HTTP CONNECT 方法时触发
+
+3. 'request' 事件
+每次有请求时都会触发。 请注意，每个连接可能有多个请求（在 HTTP Keep-Alive 连接的情况下）。
+
+## 3.2 方法
+1. server.close([callback])
+2. server.listen()
+3. server.setTimeout([msecs][, callback])
+
+## 3.3 属性
+1. server.maxHeadersCount
+限制最大传入请求头数。默认为 2000.
+
+2. server.headersTimeout
+限制解析器等待接收完整 HTTP 请求头的时间。默认为 40000。
+
+3. server.timeout
+认定套接字超时的不活动毫秒数。默认为 120000（2 分钟）。
+
+4. server.keepAliveTimeout
+服务器在完成写入最后一个响应之后，在销毁套接字之前需要等待其他传入数据的非活动毫秒数，默认为 5000（5 秒）。
 
 
 
 ## 4 http.ServerResponse 类
+## 4.1 事件
+1. close' 事件
+表明在调用 response.end() 或能够刷新之前终止了底层连接。
+
+2. 'finish' 事件
+响应发送后触发。 更具体地说，当响应头和主体的最后一段已经切换到操作系统以通过网络传输时，触发该事件。 这并不意味着客户端已收到任何信息。
+
+## 4.2 方法
 
 
 ## 5 http.IncomingMessage 类
 
+1. response.addTrailers(headers)
+此方法将 HTTP 尾部响应头（一种在消息末尾的响应头）添加到响应中。只有在使用分块编码进行响应时才会发出尾部响应头; 如果不是（例如，如果请求是 HTTP/1.0），它们将被静默丢弃。
+
+2. response.end([data][, encoding][, callback])
+
+> data <string> | <Buffer>
+> encoding <string>
+> callback <Function>
+
+此方法向服务器发出信号，表示已发送所有响应头和主体，该服务器应该视为此消息完成。 **必须在每个响应上调用方法 response.end()**。
+相当于：先用response.write(data, encoding)，然后调用 response.end(callback)。
+
+3. response.getHeader(name)
+> name <string>
+
+返回: <any>
+读出已排队但未发送到客户端的响应头。 请注意，该名称**不区分大小写**.
+
+4. response.getHeaderNames()
+
+返回一个数组，其中包含当前传出的响应头的唯一名称。 所有响应头名称都是小写的.
+
+5. response.getHeaders()
+
+
+6. response.hasHeader(name)
+
+```
+const hasContentType = response.hasHeader('content-type');
+```
+7. response.removeHeader(name)
+
+```
+response.removeHeader('Content-Encoding');
+```
+8. response.setHeader(name, value)
+> name <string>
+> value <any>
+
+```
+response.setHeader('Content-Type', 'text/html');
+response.setHeader('Set-Cookie', ['type=ninja', 'language=javascript']);
+```
+
+9. response.write(chunk[, encoding][, callback])
+
+> chunk <string> | <Buffer>
+> encoding <string> 默认为 'utf8'。
+> callback <Function>
+返回: <boolean>
 
 
 
+10.response.writeHead(statusCode[, statusMessage][, headers])
 
+> statusCode <number>
+> statusMessage <string>
+> headers <Object>
 
+```
+const body = 'hello world';
+response.writeHead(200, {
+  'Content-Length': Buffer.byteLength(body),
+  'Content-Type': 'text/plain' });
+```
 
+## 3.3 属性
+1. response.connection
+<net.Socket>
+
+2. response.statusCode
 
 
 
