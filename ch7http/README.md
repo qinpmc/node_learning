@@ -26,10 +26,13 @@ IncomingMessage 对象由 http.Server 或 http.ClientRequest 创建，并分别�
   
 7. http.request(options[, callback])/ http.request(url[, options][, callback])
 其参数options有属性agent ：
+
+```
 agent <http.Agent> | <boolean> 控制 **Agent** 的行为。可能的值有： 
     > undefined (默认): 对此主机和端口**默认使用 http.globalAgent**。
     > Agent 对象: 显式使用传入的 Agent。
     >  false: 使用具有默认值的新代理。
+```
 
 callback 只有一个参数，该**参数是 http.IncomingMessage 的实例**。
 该方法返回 **http.ClientRequest**.
@@ -51,11 +54,14 @@ Agent 负责管理 HTTP 客户端的连接持久性和重用。 它为给定的�
 
 options <Object> 要在代理上设置的可配置选项集。可以包含以下字段：
 
-> keepAlive <boolean> 即使没有未完成的请求，也要保持套接字，这样它们就可以用于将来的请求而无需重新建立 TCP 连接。 默认为 false。
-> keepAliveMsecs <number> 使用 keepAlive 选项时，指定 TCP Keep-Alive 数据包的初始延迟。 当 keepAlive 选项为 false 或 undefined 时忽略。 默认为 1000。
-> maxSockets <number> 每个主机允许的最大套接字数。默认为 Infinity。
-> maxFreeSockets <number> 在空闲状态下保持打开的最大套接字数。仅当 keepAlive 设置为 true 时才相关。默认为 256。
-> timeout <number> 套接字超时（以毫秒为单位）。这将在连接套接字后设置超时。
+```
+    > keepAlive <boolean> 即使没有未完成的请求，也要保持套接字，这样它们就可以用于将来的请求而无需重新建立 TCP 连接。 默认为 false。
+    > keepAliveMsecs <number> 使用 keepAlive 选项时，指定 TCP Keep-Alive 数据包的初始延迟。 当 keepAlive 选项为 false 或 undefined 时忽略。 默认为 1000。
+    > maxSockets <number> 每个主机允许的最大套接字数。默认为 Infinity。
+    > maxFreeSockets <number> 在空闲状态下保持打开的最大套接字数。仅当 keepAlive 设置为 true 时才相关。默认为 256。
+    > timeout <number> 套接字超时（以毫秒为单位）。这将在连接套接字后设置超时。
+```
+
 
 http.request() 使用的默认 http.globalAgent 将所有这些值设置为各自的默认值。
 详见 http1.js / http1_2.js  / agent2_1.js / agent2_2.js
@@ -113,17 +119,24 @@ http.request() 使用的默认 http.globalAgent 将所有这些值设置为各�
 
 2. response.end([data][, encoding][, callback])
 
-> data <string> | <Buffer>
-> encoding <string>
-> callback <Function>
+```
+    > data <string> | <Buffer>
+    > encoding <string>
+    > callback <Function>
+```
+
 
 此方法向服务器发出信号，表示已发送所有响应头和主体，该服务器应该视为此消息完成。 **必须在每个响应上调用方法 response.end()**。
 相当于：先用response.write(data, encoding)，然后调用 response.end(callback)。
 
 3. response.getHeader(name)
+
+```
 > name <string>
 
 返回: <any>
+```
+
 读出已排队但未发送到客户端的响应头。 请注意，该名称**不区分大小写**.
 
 4. response.getHeaderNames()
@@ -154,18 +167,24 @@ response.setHeader('Set-Cookie', ['type=ninja', 'language=javascript']);
 
 9. response.write(chunk[, encoding][, callback])
 
-> chunk <string> | <Buffer>
-> encoding <string> 默认为 'utf8'。
-> callback <Function>
-返回: <boolean>
+```
+    > chunk <string> | <Buffer>
+    > encoding <string> 默认为 'utf8'。
+    > callback <Function>
+    返回: <boolean>
+```
+
 
 
 
 10.response.writeHead(statusCode[, statusMessage][, headers])
 
-> statusCode <number>
-> statusMessage <string>
-> headers <Object>
+```
+    > statusCode <number>
+    > statusMessage <string>
+    > headers <Object>
+```
+
 
 ```
 const body = 'hello world';
@@ -227,13 +246,19 @@ Accept: text/plain\r\n
 ## 6 静态属性方法
 
 ### 6.1 http.METHODS
-> <string[]>
+
+```
+    > <string[]>
+```
+
 
 解析器支持的 HTTP 方法列表。
 
 ### 6.2 http.STATUS_CODES
 
-> <Object>
+```
+    > <Object>
+```
 
 所有标准 HTTP 响应状态码的集合，以及每个状态码的简短描述。http.STATUS_CODES[404] === 'Not Found'
 
