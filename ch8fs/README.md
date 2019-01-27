@@ -311,8 +311,8 @@ fs.rename('旧文件.txt', '新文件.txt', (err) => {
 > filename <string> | <Buffer> | <URL>
 > options <string> | <Object>
     - persistent <boolean> 指示如果文件已正被监视，进程是否应继续运行。默认为 true。
-    -recursive <boolean> 指示是监视所有子目录，还是仅监视当前目录。适用于监视目录时，仅适用于受支持的平台（参阅注意事项）。默认为 false。
-    -encoding <string> 指定用于传给监听器的文件名的字符编码。默认为 'utf8'。
+    - recursive <boolean> 指示是监视所有子目录，还是仅监视当前目录。适用于监视目录时，仅适用于受支持的平台（参阅注意事项）。默认为 false。
+    - encoding <string> 指定用于传给监听器的文件名的字符编码。默认为 'utf8'。
 > listener <Function> | <undefined> 默认为 undefined。
     -eventType <string>
     -filename <string> | <Buffer>
@@ -322,4 +322,30 @@ fs.rename('旧文件.txt', '新文件.txt', (err) => {
 第二个参数是可选的。如果 options 是字符串，则它指定 encoding。 否则 options 应是对象。
 监听器回调有两个参数 (eventType, filename)。 eventType 是 'rename' 或 'change'，filename 是触发事件的文件的名称
 
+ ## 4.10 监听文件修改fs.watchFile(filename[, options], listener)   
+ 
+```
+>  filename <string> | <Buffer> | <URL>
+>  options <Object>
+  - persistent <boolean> 默认为 true。
+  - interval <integer> 默认为 5007。
+>  listener <Function>
+  - current <fs.Stats>
+  - previous <fs.Stats>
+  
+```
+
+options 参数可以省略。 如果提供，则它应该是一个对象。 options 对象可以包含一个名为 persistent 的布尔值，指示当文件正在被监视时，进程是否应该继续运行。     
+options 对象可以指定 interval 属性，指示轮询目标的频率（以毫秒为单位）。    
+listener 有两个参数，当前的 stat 对象和之前的 stat 对象
+
+
+  
+  
+  
+  
+ 
+ 
+ 
+ 
  
