@@ -143,8 +143,12 @@ rs.on("readable", function(){
 #### 2.3.2 方法
 
 1. readable.setEncoding(encoding)
+
+```
  > encoding <string> 字符编码。
  > 返回: <this>
+```
+
 
 为从可读流读取的数据设置字符编码。默认情况下没有设置字符编码，流数据返回的是 Buffer 对象。 如果设置了字符编码，则流数据返回指定编码的字符串
 
