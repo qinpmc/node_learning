@@ -84,6 +84,11 @@ Node采用V8引擎处理JavaScript脚本，最大特点就是**单线程运行**
 - __filename：指向当前运行的脚本文件名。
 - __dirname：指向当前运行的脚本所在的目录。
 
+```
+console.log(__dirname); // F:\notes\node\node_learning\ch12global
+console.log(__filename);  // F:\notes\node\node_learning\ch12global\filename1.js
+```
+
 
 ### 5.4 其他变量
 一些对象实际上是**模块内部的局部变量**，指向的对象根据模块不同而不同，但是所有模块都适用，可以看作是伪全局变量，主要为**module, module.exports, exports**等
