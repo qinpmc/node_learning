@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f2edb9a-6226-42a6-97a2-e87b0aa3076f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ch10path/path2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ch10path/path3-format.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ch10path/path4-join.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ch10path/path5.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ch10path/path6.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ch10path/path7.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ch10path/README.md" afterPath="$PROJECT_DIR$/ch10path/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ch10path/path.js" afterPath="$PROJECT_DIR$/ch10path/path1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ch9querystring/querystring1-parse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ch9querystring/README.md" afterPath="$PROJECT_DIR$/ch9querystring/README.md" />
     </list>
     <ignored path="node_learning1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,12 +25,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ch10path/README.md">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ch9querystring/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.81773996">
-                <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+              <first_editor vertical-scroll-proportion="0.5416192">
+                <caret line="19" column="68" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -44,41 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="path7.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ch10path/path7.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24752475">
-              <caret line="9" column="77" selection-start-line="9" selection-start-column="77" selection-end-line="9" selection-end-column="77" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="path6.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ch10path/path6.js">
+      <file leaf-file-name="querystring1-parse.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ch9querystring/querystring1-parse.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="path5.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ch10path/path5.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="path2.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ch10path/path2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="27" />
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -101,8 +65,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ch2模块-module/README.md" />
-        <option value="$PROJECT_DIR$/ch3event/README.md" />
         <option value="$PROJECT_DIR$/ch3event/eventEmitter2.js" />
         <option value="$PROJECT_DIR$/ch3events模块/eventEmitter2.js" />
         <option value="$PROJECT_DIR$/ch3events模块/Emitter接口部署3.js" />
@@ -152,6 +114,8 @@
         <option value="$PROJECT_DIR$/ch10path/path6.js" />
         <option value="$PROJECT_DIR$/ch10path/README.md" />
         <option value="$PROJECT_DIR$/ch10path/path7.js" />
+        <option value="$PROJECT_DIR$/ch9querystring/README.md" />
+        <option value="$PROJECT_DIR$/ch9querystring/querystring1-parse.js" />
       </list>
     </option>
   </component>
@@ -161,8 +125,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-57" />
-    <option name="y" value="486" />
+    <option name="x" value="193" />
+    <option name="y" value="236" />
     <option name="width" value="1938" />
     <option name="height" value="1102" />
   </component>
@@ -224,34 +188,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tcp_chatroom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_learning1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_learning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ch10path" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_learning1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_learning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ch9querystring" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -370,10 +306,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-57" y="486" width="1938" height="1102" extended-state="0" />
-    <editor active="true" />
+    <frame x="193" y="236" width="1938" height="1102" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20116156" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20116156" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -404,20 +340,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ch1/4global/global1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38011697">
-          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch1/4global/process3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20467836">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ch1Node.js 概述/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -786,6 +708,25 @@
         <state vertical-scroll-proportion="0.24752475">
           <caret line="9" column="77" selection-start-line="9" selection-start-column="77" selection-end-line="9" selection-end-column="77" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch9querystring/querystring1-parse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch9querystring/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.5416192">
+            <caret line="19" column="68" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
