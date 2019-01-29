@@ -34,12 +34,13 @@ require()
 
 ### 1.6  setImmediate(callback[, ...args])、setInterval(callback, delay[, ...args])、setTimeout(callback, delay[, ...args])
 
+- callback <Function> 当定时器到点时要调用的函数。
+- delay <number> 调用 callback 之前要等待的毫秒数。
+- ...args <any> 当调用 callback 时要传入的可选参数。
 
 
 
-
-
-
+setTimeout、setImmediate方法具有可用util.promisify()提供的promises常用变体：
 
 
 
