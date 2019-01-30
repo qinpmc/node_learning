@@ -45,7 +45,7 @@ node --harmony script.js   //['--harmony']
 
 12. process.ppid
 当前父进程的进程ID.
- 
+
 13. process.stderr/process.stdin/process.stdout
 
 错误/输入/输出流。

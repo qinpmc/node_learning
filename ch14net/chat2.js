@@ -41,3 +41,11 @@ function broadcast(message,client){
     }
 }
 chatServer.listen(9000);
+
+// 1.打开命令行，输入： telnet 127.0.0.1 9000   连接服务器
+// 2. 输入信息，如： hello, I am first
+
+// 3. 打开新的命令行窗口，输入 telnet 127.0.0.1 9000   连接服务器
+// 4. 输入信息，如： hello, I am second
+
+
