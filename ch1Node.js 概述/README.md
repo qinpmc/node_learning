@@ -3,7 +3,7 @@
 Node内部采用Google公司的**V8引擎，作为JavaScript语言解释器**；通过自行开发的**libuv库，调用操作系统资源**。
 
 ##  1 nvm
-nvm就是一个可以让你在同一台机器上安装和切换不同版本node的工具
+nvm就是一个可以让你在同一台机器上安装和切换**不同版本node**的工具
 
 下载地址（nvm-windows）：
 https://github.com/coreybutler/nvm-windows
@@ -50,6 +50,22 @@ Read -eval -print-loop 读取-求值-输出 循环
 .help     Print this help message
 .load     Load JS from a file into the REPL session  //可用于保存REPL输入的内容
 .save     Save all evaluated commands in this REPL session to a file
+
+
+
+## node.js 调试
+
+1. 借助 vscode（示例：debugger1.js）
+- 直接在代码中左侧打断点，
+- 然后点击vscode 的debug（源码控制下方的按钮）
+- 浏览器请求，进入断点
+
+2. --inspect-brk结合Chrome开发者工具 
+ 
+- 安装node-inspect  npm install -g node-inspect
+- 运行node 代码， node --inspect app.js  ，如果想让代码在第一行就停下来,等待调试也可以使用： node --inspect-brk app.js
+
+- 在Chrome中打开chrome://inspect/#devices
 
 
 ## 4 异步操作

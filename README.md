@@ -9,16 +9,7 @@ npm config set cache "C:\Program Files\nodejs\node_cache"
 恢复默认值：方法是删除C:\Users\gis\.npmrc这个文件。 （gis为用户名）
 
 
-node 调试:
 
-- npm install -g node-inspect
-- node --inspect app.js
-
-如果想让代码在第一行就停下来,等待调试也可以使用
-
-- node --inspect-brk app.js
-
-- 在Chrome中打开chrome://inspect/#devices
 
 
 
