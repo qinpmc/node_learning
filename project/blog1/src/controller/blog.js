@@ -18,6 +18,22 @@ const getList = (author,keyword) =>{
     ]
 }
 
+const getDetail = (id) =>{
+    return {
+        id:id,
+        content:"boke"
+    }
+}
+
+
+const newBlog = (blogData = {}) =>{
+    return {
+        id:3  //新建博客
+    }
+}
+
 module.exports = {
-    getList
+    getList,
+    newBlog,
+    getDetail
 }
