@@ -1,42 +1,63 @@
-const getList = (author,keyword) =>{
+const { exec } = require("../db/mysql")
 
-    return [
-        {
-            id:"1",
-            title:"标题A",
-            content:"内容A",
-            createTime:1575208494207,
-            author:"zhangsan"
-        },
-        {
-            id:"2",
-            title:"标题B",
-            content:"内容B",
-            createTime:1575208494210,
-            author:"lisi"
+const getList = (author, keyword) => {
+
+    let sql = `select * from blog where 1=1 `
+    if (author) {
+        sql += `and author = '${author}' `
+    }
+
+    if (keyword) {
+        sql += `and title like '%${keyword}%' `
+    }
+    sql += `order by createtime desc;`
+    return exec(sql)
+
+}
+
+const getDetail = (id) => {
+
+    let sql = `select * from blog where id= '${id}' `
+    return exec(sql).then(rows => {
+        console.log(rows)
+        return rows[0]
+    })
+}
+
+
+
+
+const newBlog = (blogData = {}) => {
+    const title = blogData.title
+    const content = blogData.content
+    const author = blogData.author
+    const createtime = Date.now()
+
+    const sql = `insert into blog (title,content,author,createtime) 
+                values('${title}','${content}','${author}','${createtime}')`
+
+    return exec(sql).then((insertRes) => {
+        console.log(insertRes)
+        return {
+            id: insertRes.insertId
         }
-    ]
+    })
 }
 
-const getDetail = (id) =>{
-    return {
-        id:id,
-        content:"boke"
-    }
+const updateBlog = (id, blogData = {}) => {
+    const title = blogData.title
+    const content =blogData.content
+    const sql =`update blog set title = '${title}',content='${content}' where id='${id}'` 
+    return exec(sql).then((updateData)=>{
+        console.log(updateData)
+        if(updateData.affectedRows >0){
+            return true
+        }
+        return false
+    })
 }
 
-
-const newBlog = (blogData = {}) =>{
-    return {
-        id:3  //新建博客
-    }
-}
-
-const updateBlog = (id,blogData = {}) =>{
-    return false
-}
-
-const delBlog = (id) =>{
+const delBlog = (id) => {
     return true
 }
 
