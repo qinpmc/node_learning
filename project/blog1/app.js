@@ -71,7 +71,7 @@ const serverHandle = (req, res) => {
             SESSION_DATA[userId] = {}
         }
     }else{
-        needSetCookie = true
+        needSetCookie = true // cookie中没有 userId，设置该cookie
         userId = `${Date.now()}_${Math.random()}`
         SESSION_DATA[userId] = {}
     }

@@ -23,3 +23,13 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY '123456' PASSWORD EXPIRE NEVER;(注�
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
 FLUSH PRIVILEGES;
 ```
+
+
+## redis 安装
+ 
+- 1 下载 Redis-x64-3.2.100.zip，下载地址： https://github.com/MSOpenTech/redis/releases
+- 2 解压Redis-x64-3.2.100.zip，在E:\qinpmc\software
+- 3 环境变量path中添加 E:\qinpmc\software\Redis-x64-3.2.100
+- 4 验证：cmd窗口运行： redis-server.exe， 窗口出现 Server started, Redis version 3.2.100代表启动成功 
+  另启一个 cmd 窗口，原来的不要关闭，不然就无法访问服务端，运行 ： redis-cli.exe，窗口窗口出现 127.0.0.1:6379>，代表成功进入
+
