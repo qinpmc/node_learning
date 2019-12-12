@@ -1,5 +1,8 @@
 const handleBlogRouter = require("./src/router/blog")
 const handleUserRouter = require("./src/router/user")
+
+const {get,set} = require("./src/db/redis")
+
 const querystring = require("querystring")
 
 const getCookieExpires = () =>{
@@ -64,22 +67,44 @@ const serverHandle = (req, res) => {
 
 
     //解析session
-    let userId = req.cookie.userid
+    // let needSetCookie = false
+    // let userId = req.cookie.userid
+
+    // if(userId){
+    //     if(!SESSION_DATA[userId]){ //为空进行初始化
+    //         SESSION_DATA[userId] = {}
+    //     }
+    // }else{
+    //     needSetCookie = true // cookie中没有 userId，设置该cookie
+    //     userId = `${Date.now()}_${Math.random()}`
+    //     SESSION_DATA[userId] = {}
+    // }
+    // req.session = SESSION_DATA[userId]
+
+    // 解析session - 使用redis
+    
     let needSetCookie = false
-    if(userId){
-        if(!SESSION_DATA[userId]){ //为空进行初始化
-            SESSION_DATA[userId] = {}
-        }
-    }else{
-        needSetCookie = true // cookie中没有 userId，设置该cookie
+    let userId = req.cookie.userid
+
+    if(!userId){
+        needSetCookie = true 
         userId = `${Date.now()}_${Math.random()}`
-        SESSION_DATA[userId] = {}
+
+        //初始化redis中的session
+        set(userId,{})
     }
-    req.session = SESSION_DATA[userId]
 
-
-
-    getPostData(req).then(postData => {
+    req.sessionId = userId
+    get(req.sessionId).then(sessionData =>{
+        if(sessionData ==null){
+            set(req.sessionId,{})
+            req.session = {}
+        }else{
+            req.session = sessionData
+        }
+        return getPostData(req)
+    })
+    .then(postData => {
 
         //将post数据绑定到req的body属性
         req.body = postData;
